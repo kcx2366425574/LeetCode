@@ -9,12 +9,12 @@
 @ide: PyCharm
 @desc: 最长字符串链
 """
-from collections import defaultdict, Counter
+from collections import Counter
 
 
 class Solution:
     def longestStrChain(self, words: list[str]) -> int:
-        words.sort(key=lambda s: len(s))
+        words.sort(key=len)
         str_to_chainlen = Counter()
         max_length = 0
         for w in words:
