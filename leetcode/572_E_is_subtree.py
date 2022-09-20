@@ -20,14 +20,13 @@ class TreeNode:
 
 class Solution:
     def compare(self, one, another):
-        if (one is None and another is not None) or (another is None and one is not None):
-            return False
         if one is None and another is None:
             return True
-        if one.val != another.val:
+        if one is None or another is None or one.val != another.val:
             return False
-        return True and self.compare(one.left, another.left) and self.compare(one.right, another.right)
+        return self.compare(one.left, another.left) and self.compare(one.right, another.right)
 
+    # 深度优先搜索暴力匹配
     def isSubtree(self, root: TreeNode, subRoot: TreeNode) -> bool:
         if not root and subRoot:
             return False
