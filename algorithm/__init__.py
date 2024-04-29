@@ -9,10 +9,11 @@
 @ide: PyCharm
 @desc: 
 """
+import paddlenlp
+from paddlenlp import Taskflow
 
-while 1:
-    while 0:
-        print(1)
-    else:
-        print("else")
-    break
+
+similarity = Taskflow("text_similarity")
+
+a = similarity([["世界上什么东西最小", "世界上最小的东西是什么呢?"]])
+print(a)

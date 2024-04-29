@@ -9,3 +9,7 @@
 @ide: PyCharm
 @desc: 剑指offer
 """
+
+"""
+58: 左旋转字符串
+"""
